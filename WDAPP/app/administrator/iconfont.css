@@ -1,0 +1,33 @@
+
+ @font-face {font-family: "iconfont";
+        src:url('./iconfont.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    }
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cart:before { content: "\e698"; }
+
+.icon-folder:before { content: "\e6a1"; }
+
+.icon-buynow:before { content: "\e602"; }
+
+.icon-goumai:before { content: "\e62f"; }
+
+.icon-gou:before { 
+	content: "\e641";
+	color: dodgerblue;
+ }
+
+
+.icon-gantanhao1:before { content: "\e504"; }
+
+
+
+ .icon-call:before { content: "\e608"; }
+

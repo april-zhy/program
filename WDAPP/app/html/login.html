@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!--图标-->
+	<link rel="icon" href="img/adminImg/touxiang.jpg" />
+	<!--引入CSS样式表-->
+	<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/login.css"/>
+</head>
+<body>
+
+   <div class="mui-content">
+	    <header class="mui-bar mui-bar-nav">
+		   <a id="toggleForm" class="login" >注册</a>
+		   <a id="gotoIndex" class="login mui-pull-right">随便逛逛></a>
+	    </header>
+		
+		<div class="mui-content mui-scroll-wrapper">
+			<!--登录表单-->
+		   <form id="loginForm" class="mui-input-group login-form" style="display: none;">
+			   <div class="mui-input-row">
+				   <label><span class="mui-icon mui-icon-person"></span></label>
+				   <input id="loginName" type="text" class="mui-input-clear" placeholder="请输入用户名">
+			   </div>
+			   <div class="mui-input-row">
+				   <label><span class="mui-icon mui-icon-locked"></span></label>
+				   <input id="loginPwd" type="password" class="mui-input-password" placeholder="请输入">
+			   </div>
+			   <div class="mui-input-row">
+				   <button id="loginBtn" type="button" class="mui-btn mui-btn-black" data-loading-text="登录中">登录</button>
+			   </div>
+		   </form>
+
+			<!--注册表单-->
+		    <form id="regForm" class="mui-input-group reg-form" style="display: block;">
+			    <div class="mui-input-row">
+				   <label><span  class="mui-icon mui-icon-person"></span></label>
+				   <input id="regName" type="text" class="mui-input-clear" id="regName" placeholder="请输入6~16位的用户名" />
+			   </div>
+			    <div class="mui-input-row">
+				   <label><span class="mui-icon mui-icon-locked"></span></label>
+				   <input id='regPwd' type="password" class="mui-input-password" id="regPwd" placeholder="请输入至少8位密码">
+			    </div>
+			    <div class="mui-input-row">
+				   <label><input id="pinCode" class="pin-code" type="button" value="A5d7" /></label>
+				   <input type="text" class="mui-input-clear" placeholder="请输入验证码" id="vertify" >
+			    </div>
+			    <span id="att-span"></span>
+			    <div class="mui-input-row">
+				   <button id="regBtn" type="button" class="mui-btn mui-btn-black" data-loading-text="注册中" >注册</button>
+			   </div>
+		    </form>
+		   
+		  
+	    </div>
+    </div>
+    
+    <script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/zhylib.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
+   
+</body>
+</html>

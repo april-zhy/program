@@ -1,0 +1,443 @@
+{
+	"index.html": {
+		"resources": [
+			"img/goodsImg/index004.png",
+			"img/goodsImg/index002.png",
+			"fonts/mui.ttf",
+			"img/goodsImg/index006.png",
+			"css/mui.css",
+			"img/goodsImg/index001.png",
+			"img/goodsImg/hs0103.jpg",
+			"css/home.css",
+			"css/iconfont.ttf",
+			"img/basicImg/2.1.jpg",
+			"img/goodsImg/index003.png",
+			"css/iconfont.css",
+			"img/basicImg/login-bg.jpeg",
+			"css/iconfont.woff",
+			"js/zhylib.js",
+			"img/goodsImg/index005.png",
+			"js/mui.js",
+			"js/index.js",
+			"img/basicImg/index002.png",
+			"img/basicImg/index003.png",
+			"img/basicImg/index005.png",
+			"img/basicImg/index001.png",
+			"img/basicImg/index006.png",
+			"img/basicImg/index004.png",
+			"administrator/goodsImg/OSimg/os0205.jpg",
+			"administrator/goodsImg/OSimg/os0101.jpg",
+			"html/home.html",
+			"html/person.html",
+			"css/mui.min.css",
+			"js/mui.min.js",
+			"html/shopCart.html",
+			"html/index-sub-home.html",
+			"css/login.css",
+			"js/login.js"
+		],
+		"refer": [
+			"html/classify.html",
+			"html/login.html",
+			"html/order.html",
+			"html/person.html",
+			"html/shopCart.html",
+			"html/home.html",
+			"html/index-sub-home.html",
+			"html/index-sub-person.html",
+			"html/index-sub-shopCart.html",
+			"html/index-sub-classify.html",
+			"html/confirmOrder.html",
+			"index01.html"
+		]
+	},
+	"html/classify.html": {
+		"resources": [
+			"css/classify.css",
+			"js/mui.js",
+			"js/classify.js",
+			"fonts/mui.ttf",
+			"js/zhylib.js",
+			"css/mui.css",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"html/goodslist.html"
+		]
+	},
+	"html/login.html": {
+		"resources": [
+			"css/login.css",
+			"js/login.js",
+			"js/mui.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"img/basicImg/login-bg.jpeg",
+			"css/mui.css",
+			"js/zhylib.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"html/order.html": {
+		"resources": [
+			"css/order.css",
+			"js/mui.js",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"administrator/goodsImg/HSimg/hs0102.jpg"
+		]
+	},
+	"html/person.html": {
+		"resources": [
+			"js/mui.js",
+			"img/basicImg/2.1.jpg",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"js/person.js",
+			"js/mui.picker.min.js",
+			"css/mui.picker.min.css",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"html/addressList.html"
+		]
+	},
+	"html/shopCart.html": {
+		"resources": [
+			"css/shopCart.css",
+			"js/shopCart.js",
+			"js/mui.js",
+			"img/goodsImg/xf20.jpg",
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"administrator/goodsImg/HSimg/hs0102.jpg",
+			"administrator/goodsImg/HSimg/hs0104.jpg",
+			"administrator/goodsImg/HSimg/hs0101.jpg",
+			"administrator/goodsImg/HSimg/hs0103.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"html/order.html"
+		]
+	},
+	"html/goodslist.html": {
+		"resources": [
+			"js/goodslist.js",
+			"img/goodsImg/xf20.jpg",
+			"css/goodslist.css",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"js/zhylib.js",
+			"js/mui.js",
+			"css/mui.css",
+			"img/goodsImg/HS/xf20.jpg",
+			"administrator/goodsImg/OSimg/os0101.jpg",
+			"administrator/goodsImg/ZSimg/zs0505.jpg",
+			"administrator/goodsImg/OSimg/os0205.jpg",
+			"administrator/goodsImg/ZSimg/zs0301.jpg",
+			"administrator/goodsImg/ZSimg/zs0201.jpg",
+			"administrator/goodsImg/ZSimg/zs0405.jpg",
+			"administrator/goodsImg/ZSimg/zs0101.jpg",
+			"administrator/goodsImg/ZSimg/zs0405.jpg/",
+			"administrator/goodsImg/ZSimg/zs0201.jpg/",
+			"administrator/goodsImg/ZSimg/zs0301.jpg/",
+			"administrator/goodsImg/ZSimg/zs0505.jpg/",
+			"administrator/goodsImg/ZSimg/zs0101.jpg/",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"administrator/goodsImg/OSimg/os0105.jpg",
+			"administrator/goodsImg/OSimg/os0301.jpg",
+			"administrator/goodsImg/OSimg/os0401.jpg",
+			"administrator/goodsImg/HSimg/hs0105.jpg",
+			"administrator/goodsImg/HSimg/hs0205.jpg",
+			"administrator/goodsImg/HSimg/hs0305.jpg"
+		],
+		"refer": [
+			"html/goods.html",
+			"index.html"
+		]
+	},
+	"html/goods.html": {
+		"resources": [
+			"css/iconfont.ttf",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/goods.css",
+			"css/iconfont.woff",
+			"js/mui.js",
+			"css/mui.css",
+			"administrator/goodsImg/HSimg/hs0101.jpg",
+			"js/goods.js",
+			"js/zhylib.js",
+			"administrator/goodsImg/ZSimg/zs0403.jpg",
+			"administrator/goodsImg/ZSimg/zs0402.jpg",
+			"administrator/goodsImg/ZSimg/zs0404.jpg",
+			"administrator/goodsImg/ZSimg/zs0401.jpg",
+			"administrator//goodsImg/ZSimg/zs0402.jpg",
+			"administrator//goodsImg/ZSimg/zs0401.jpg",
+			"administrator//goodsImg/ZSimg/zs0403.jpg",
+			"administrator//goodsImg/ZSimg/zs0404.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"administrator//goodsImg/ZSimg/zs0502.jpg",
+			"administrator/goodsImg/HSimg/hs0104.jpg",
+			"administrator//goodsImg/ZSimg/zs0504.jpg",
+			"administrator/goodsImg/HSimg/hs0102.jpg",
+			"administrator/goodsImg/HSimg/hs0103.jpg",
+			"administrator/goodsImg/HSimg/hs0105.jpg",
+			"administrator//goodsImg/ZSimg/zs0501.jpg",
+			"administrator//goodsImg/ZSimg/zs0503.jpg",
+			"administrator/goodsImg/ZSimg/zs0305.jpg",
+			"administrator/goodsImg/ZSimg/zs0304.jpg",
+			"administrator/goodsImg/ZSimg/zs0302.jpg",
+			"administrator/goodsImg/ZSimg/zs0303.jpg",
+			"administrator/goodsImg/ZSimg/zs0301.jpg",
+			"administrator/goodsImg/ZSimg/zs0505.jpg",
+			"administrator//goodsImg/OSimg/os0305.jpg",
+			"administrator//goodsImg/OSimg/os0302.jpg",
+			"administrator/goodsImg/OSimg/os0301.jpg",
+			"administrator//goodsImg/OSimg/os0304.jpg",
+			"administrator//goodsImg/OSimg/os0303.jpg",
+			"administrator/goodsImg/ZSimg/zs0405.jpg",
+			"administrator//goodsImg/OSimg/os0403.jpg",
+			"administrator//goodsImg/OSimg/os0402.jpg",
+			"administrator//goodsImg/OSimg/os0404.jpg",
+			"administrator//goodsImg/OSimg/os0405.jpg",
+			"administrator/goodsImg/OSimg/os0401.jpg",
+			"administrator//goodsImg/OSimg/os0102.jpg",
+			"administrator//goodsImg/OSimg/os0104.jpg",
+			"administrator//goodsImg/OSimg/os0103.jpg",
+			"administrator//goodsImg/OSimg/os0101.jpg",
+			"administrator/goodsImg/OSimg/os0105.jpg",
+			"administrator/goodsImg/ZSimg/zs0104.jpg",
+			"administrator/goodsImg/ZSimg/zs0103.jpg",
+			"administrator/goodsImg/ZSimg/zs0102.jpg",
+			"administrator/goodsImg/ZSimg/zs0101.jpg",
+			"administrator/goodsImg/ZSimg/zs0105.jpg",
+			"administrator//goodsImg/OSimg/os0203.jpg",
+			"administrator//goodsImg/OSimg/os0204.jpg",
+			"administrator//goodsImg/OSimg/os0202.jpg",
+			"administrator//goodsImg/OSimg/os0201.jpg",
+			"administrator/goodsImg/OSimg/os0205.jpg"
+		],
+		"refer": [
+			"html/login.html",
+			"html/confirmOrder.html",
+			"index.html"
+		]
+	},
+	"html/home.html": {
+		"resources": [
+			"img/basicImg/index003.png",
+			"img/basicImg/index002.png",
+			"img/basicImg/index005.png",
+			"img/basicImg/index001.png",
+			"img/basicImg/index006.png",
+			"img/basicImg/index004.png",
+			"js/home.js",
+			"js/mui.js",
+			"css/home.css",
+			"js/zhylib.js",
+			"css/mui.css",
+			"administrator/goodsImg/OSimg/os0205.jpg",
+			"administrator/goodsImg/OSimg/os0101.jpg",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"html/addressList.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"css/mui.css",
+			"js/mui.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"html/editAddress.html"
+		]
+	},
+	"html/editAddress.html": {
+		"resources": [
+			"js/mui.picker.js",
+			"fonts/mui.ttf",
+			"js/mui.js",
+			"css/mui.css",
+			"js/city.min.js",
+			"js/city.data.js",
+			"js/mui.listpicker.js",
+			"js/mui.poppicker.js",
+			"css/mui.picker.min.css",
+			"js/mui.picker.min.js",
+			"js/city.data-3.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"html/index-sub-home.html": {
+		"resources": [
+			"img/basicImg/index002.png",
+			"administrator/goodsImg/OSimg/os0205.jpg",
+			"administrator/goodsImg/OSimg/os0101.jpg",
+			"js/home.js",
+			"js/zhylib.js",
+			"img/basicImg/index003.png",
+			"img/basicImg/index005.png",
+			"img/basicImg/index001.png",
+			"img/basicImg/index006.png",
+			"img/basicImg/index004.png",
+			"css/home.css",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"html/login.html"
+		]
+	},
+	"html/index-sub-person.html": {
+		"resources": [
+			"js/person.js",
+			"js/mui.picker.min.js",
+			"js/mui.min.js",
+			"img/basicImg/2.1.jpg",
+			"css/mui.picker.min.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"img/basicImg/touxiang.jpg"
+		],
+		"refer": [
+			"index.html",
+			"html/addressList.html"
+		]
+	},
+	"html/index-sub-shopCart.html": {
+		"resources": [
+			"css/shopCart.css",
+			"administrator/goodsImg/HSimg/hs0101.jpg",
+			"administrator/goodsImg/HSimg/hs0102.jpg",
+			"js/shopCart.js",
+			"js/zhylib.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"administrator//goodsImg/ZSimg/zs0502.jpg",
+			"administrator//goodsImg/ZSimg/zs0101.jpg",
+			"administrator/goodsImg/ZSimg/zs0202.jpg",
+			"administrator//goodsImg/OSimg/os0103.jpg",
+			"administrator//goodsImg/OSimg/os0401.jpg",
+			"administrator//goodsImg/ZSimg/zs0505.jpg",
+			"administrator//goodsImg/OSimg/os0302.jpg",
+			"administrator//goodsImg/OSimg/os0403.jpg",
+			"administrator//goodsImg/ZSimg/zs0301.jpg",
+			"administrator//goodsImg/ZSimg/zs0501.jpg",
+			"administrator//goodsImg/OSimg/os0404.jpg",
+			"administrator//goodsImg/OSimg/os0303.jpg",
+			"administrator/goodsImg/ZSimg/zs0302.jpg",
+			"administrator//goodsImg/OSimg/os0405.jpg",
+			"administrator//goodsImg/OSimg/os0304.jpg",
+			"administrator/goodsImg/ZSimg/zs0303.jpg",
+			"administrator//goodsImg/ZSimg/zs0504.jpg",
+			"administrator//goodsImg/ZSimg/zs0403.jpg",
+			"administrator//goodsImg/OSimg/os0202.jpg",
+			"administrator//goodsImg/OSimg/os0204.jpg",
+			"administrator//goodsImg/ZSimg/zs0402.jpg",
+			"administrator//goodsImg/OSimg/os0104.jpg",
+			"administrator//goodsImg/ZSimg/zs0503.jpg",
+			"administrator//goodsImg/OSimg/os0105.jpg",
+			"administrator//goodsImg/ZSimg/zs0405.jpg",
+			"administrator//goodsImg/OSimg/os0205.jpg",
+			"administrator/goodsImg/OSimg/os0102.jpg",
+			"administrator/goodsImg/ZSimg/zs0203.jpg",
+			"administrator//goodsImg/OSimg/os0301.jpg"
+		],
+		"refer": [
+			"html/login.html",
+			"html/confirmOrder.html"
+		]
+	},
+	"html/index-sub-classify.html": {
+		"resources": [
+			"js/classify.js",
+			"js/zhylib.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"html/goodslist.html",
+			"html/goods.html"
+		]
+	},
+	"html/confirmOrder.html": {
+		"resources": [
+			"administrator//goodsImg/ZSimg/zs0405.jpg",
+			"administrator//goodsImg/ZSimg/zs0505.jpg",
+			"js/confirmOrder.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/zhylib.js",
+			"administrator//goodsImg/OSimg/os0301.jpg",
+			"administrator//goodsImg/OSimg/os0401.jpg",
+			"administrator//goodsImg/ZSimg/zs0301.jpg",
+			"administrator//goodsImg/OSimg/os0205.jpg",
+			"administrator//goodsImg/OSimg/os0105.jpg",
+			"administrator//goodsImg/ZSimg/zs0101.jpg"
+		],
+		"refer": [
+			"html/payfor.html",
+			"html/editAddress.html"
+		]
+	},
+	"html/payfor.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"html/myOrder.html"
+		]
+	},
+	"html/myOrder.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/order.css",
+			"css/mui.min.css",
+			"administrator/goodsImg/OSimg/os0102.jpg",
+			"js/myOrder.js",
+			"js/zhylib.js",
+			"administrator//goodsImg/ZSimg/zs0505.jpg",
+			"administrator//goodsImg/OSimg/os0401.jpg"
+		]
+	},
+	"index01.html": {
+		"resources": [
+			"css/home.css",
+			"css/iconfont.ttf",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"js/zhylib.js",
+			"html/index-sub-home.html",
+			"js/index.js",
+			"js/shopCart.js"
+		],
+		"refer": [
+			"html/index-sub-person.html",
+			"html/index-sub-shopCart.html",
+			"html/index-sub-classify.html",
+			"html/index-sub-home.html",
+			"index.html"
+		]
+	}
+}

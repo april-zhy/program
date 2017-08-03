@@ -1,0 +1,85 @@
+/*订单信息*/
+.orderMsg,.orderUser{
+    float: left;
+    width: 100%;
+    color: #929292;
+    background-color:#fff ;
+    padding:5px 15px 0px 15px;
+}
+
+.mui-content .orderP{
+    clear: both;
+    display: block;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+}
+/*水平线*/
+.hr{
+	width:95%;
+	height: 0px;
+	color: #e8e8e8;
+}
+/*订单主人*/
+
+
+/*订单明细  图片*/
+#orderImg{
+	float: left;
+	margin-top: 5px;
+	/*border: 1PX solid red;*/
+}
+#orderImg .orderImg{
+    float: left;
+    margin-bottom: 5px;
+    width: 100%;
+    color: #929292;
+    background-color:#fff ;
+    padding: 15px;
+    
+}
+ #orderImg .orderImgBox{
+    float: left;
+    width: 100%;
+    padding: 10px;
+    border:1px solid #8f8f94;
+}
+#orderImg .orderImgBox .orderImgTopic{
+    float: left;
+    display: block;
+    width: 190px;
+    margin: 15px 0px 0px 15px;
+}
+.orderImgNum{
+	display: block;
+	width: 30px;
+	margin: 5px 0px 0px 15px;
+	float: left;
+}
+#orderImg .orderImgBox img{
+    float: left;
+    width: 100px;
+    height:100px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+
+.orderTotalPrice{
+    display: block;
+    width: 100%;
+    height:100%;
+    text-align: right;
+
+    padding: 15px 20px 10px 0px;
+
+}
+
+
+
+
+
+
+
+
+

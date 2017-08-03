@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>商品详情</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/goods.css"/>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">商品详情</h1>
+    </header>
+    
+ 	<!--加入购物车   以及立即购买-->
+    <button class="mui-btn-hui btnAdd" id="addToShopCart">
+        <span class="iconfont icon-cart">加入购物车</span>
+    </button>
+    <button class="mui-btn-hui btnBuy" id="buyNowBtn">
+        <span class="iconfont icon-goumai">立即购买</span>
+    </button>
+    
+    
+    
+    <div class="mui-content">
+		<div id="slider" class="mui-slider mui-fullscreen">
+			<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				<div class="mui-scroll" style="width: 100%;">
+					<a class="mui-control-item mui-active" href="#item1mobile"
+						style="width: 50%;">
+						商品详情
+					</a>
+					<a class="mui-control-item" href="#item2mobile"
+						style="width: 50%;">
+						商品评论
+					</a>
+				</div>
+			</div>
+			<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6 mui-active"></div>
+			<div class="mui-slider-group">
+				<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+					<div id="scroll1" class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<div class="goodsImg">
+                				<img class="bigImg" src="0012" />
+		                    <ul class="smallGoodImgList">
+		                    
+		                    </ul>
+                		</div>
+		                    <div class="goodsDescribe">
+		                    	<p class="goodsDetails">
+		                        	1
+		                        </p>
+		                    	<p class="goodsPrice">
+		                            <s><span id='normalPrice'>0</span></s>
+		                            <span id="realPrice">0</span>
+		                            <span class="goodsName">0</span>
+		                       </p>    
+		                    </div>
+		                    <br /><br />
+						</div>
+					</div>
+				</div>
+				<div id="item2mobile" class="mui-slider-item mui-control-content">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<ul class="mui-table-view commentUL">
+		                        
+		                    </ul>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/zhylib.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/goods.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    	mui.init();
+		(function($) {
+			//阻尼系数
+			var deceleration = mui.os.ios?0.003:0.0009;
+			$('.mui-scroll-wrapper').scroll({
+				bounce: false,
+				indicators: true, //是否显示滚动条
+				deceleration:deceleration
+			});
+			$.ready(function() {
+				//循环初始化所有下拉刷新，上拉加载。
+//					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
+//						console.log('pullRefreshEl:'+pullRefreshEl+")");
+//					});
+				
+				/*var createFragment = function(commentUL, index, count, reverse) {
+					var length = commentUL.querySelectorAll('li').length;
+					var fragment = document.createDocumentFragment();
+					var li;
+					for (var i = 0; i < count; i++) {
+						li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '第' + (index + 1) + '个选项卡子项-' + (length + (reverse ? (count - i) : (i + 1)));
+						fragment.appendChild(li);
+					}
+					return fragment;
+				};*/
+			});
+		})(mui);
+		
+		
+		
+    </script>
+</body>
+</html>

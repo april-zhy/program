@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>提交订单页面</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+    <style>
+    
+    	.userInfo{
+    		background: #ffffff;
+    		padding: 5px;
+    		margin-bottom: 5px;
+    	}
+    	.goToAddAddress{
+    		display: block;
+    		text-align: center;
+    		border: 1px solid red;
+    	}
+    	.orderGoodsListItem{
+    		width: 100%;
+    		background: #ffffff;
+    		margin-top: 5px;
+    	}
+    	/*图片*/
+    	.orderGoodsList .orderGoodsListImg{
+    		float: left;
+    		margin: 5px 10px;
+		    width: 80px;
+		    height:80px;
+		    border-radius: 5px;
+    	}
+    	.orderGoodsList .orderGoodsName{
+    		float: left;
+			width: 50%;
+			height: 80px;
+			padding:20px 10px;
+    	}
+    	.orderGoodsList .orderGoodsInfo{
+    		float: left;
+    		width: 18%;
+    		padding: 10px 10px;
+    		
+    	}
+    	.orderGoodsList .orderUserMsg{
+    		
+    		float: left;
+    		width: 100%;
+    		height: 50px;
+    		padding: 5px 8px;
+    		line-height: 40px;
+    		/*border: 1px solid red;*/
+    	}
+    	.orderGoodsList .orderUserMsg .orderUserMsgIpt{
+    		width: 78%;
+    		float: right;
+    	}
+    	.orderGoodsList .orderGoodsSmallCount{
+    		clear: both;
+    		padding: 5px 15px;
+    		margin: 0 auto;
+    		
+    	}
+		.mui-bar>p{
+		    float: left;
+		    padding: 0;
+		    margin: 0 auto;
+		    height: 50px;
+		    font-size: 16px;
+		}
+		.totalPrice{
+			width: 70%;
+		    line-height: 48px;
+		    text-align: center;
+		}
+		.submitOrderBtn{
+		    width: 124%;
+		    height:100%;
+		    color: white;
+		    font-size: 16px;
+		    background: red;
+		    border: none;
+		}
+		.totalPrice>span{
+			color: red;
+		}
+    </style>
+</head>
+<body>
+    
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <span class="mui-pull-left" style="line-height: 45px;">确认订单</span>
+    </header>
+    
+    
+    <nav class="mui-bar mui-bar-tab">
+    	<p class="totalPrice">
+    		共<span class="orderAllCountNum">0</span>件
+    		总金额&yen;<span id="totalPrice">0</span>
+        </p>
+        <p class="buyNow">
+            <button id="submitOrderBtn" class="submitOrderBtn">提交订单</button>
+        </p>
+    </nav>
+    <div class="mui-content">
+    	<div id="userInfo">
+    	</div>
+        <div class="orderGoodsList">
+        </div>
+    </div>
+
+    <script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/zhylib.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/confirmOrder.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

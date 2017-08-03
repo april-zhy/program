@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>商品列表</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
+    <style>
+    	.headderSearch{
+    		width: 80%;
+    		float: left;
+    		margin: -43px 0px 0px 28px;
+    	}
+    	.goodsContent{
+			position: absolute;
+			float: left;
+			top: 45px;
+			width: 100%;
+		}
+		.goodsListNull{
+			font-size: 20px;
+			color: #929292;
+			line-height: 45px;
+			margin-top: 50%;
+			text-align: center;
+			width: 100%;
+		}
+		.goodsList{
+			width: 49%;
+			height: 200px;
+			float: left;
+			margin-left: 2px;
+			margin-right: 1px;
+			margin-top: 2px;
+		}
+		.goodsList img{
+			width: 100%;
+			height: 100%;
+			border-radius: 5px;
+			/*border: 1px solid red;*/
+		}
+		
+		.listGoodsDetail{
+			position: relative;
+			width: 100%;
+			height: 45px;
+			top: -50px;
+			background:rgba(0,0,0,0.5);
+			border-radius:0px  0px 5px 5px;
+		}
+		
+		.listGoodsDetail p{
+			display: block;
+			margin: 0;
+			color: white;
+			font-size: 10px;
+			font-weight: 10.5;
+			padding-left: 10px;
+		}
+		.seachBtn{
+			margin-top: -30px;
+			font-size: 18px;
+			color: #929292;
+		}
+    </style>
+</head>
+<body>
+	
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+    	<div class="mui-input-row mui-search headderSearch">
+            <input type="search" class="mui-input-clear" placeholder="输入关键字搜索" id="seachIpt">
+        </div>
+       <a class="mui-pull-right seachBtn" id="seachBtn">搜索</a>
+    </header>
+    <div class="mui-content">
+        <div class="goodsContent">
+            <!--<div class="goodsListNull">~~~暂无商品~~~</div>-->
+        </div>
+    </div>    
+    <script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/zhylib.js" type="text/javascript"></script>
+    <script src="../js/goodslist.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

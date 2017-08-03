@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+    
+    
+    <style type="text/css">
+    	.mui-table-view-cell{
+    		margin-top: 8px;
+    		border-top: 1px solid #e8e8e8;
+    	}
+    	.mui-table-view-cell p{
+    		display: inline-block;
+    		padding: 5px;
+    		color: #666;
+    	}
+    	.addrItemUserName,.addrItemUserTel{
+    		width: 49%;
+    		font-size: 18px;
+    		
+    	}
+    	.addrItemUserAddr{
+    		width: 100%;
+    		height: 30px;
+    		border-bottom: 1px dashed #d8d8d8;
+    	}
+    	.addrItemOperation{
+    		width: 100%;
+    		padding-left: 5px;
+    		
+    	}
+    	.addrItemOperation .addrInpt{
+    		font-size: 20px;
+    		margin-top: 10px;
+    	}
+    	.addrItemOperation .addrEdit,.addrDel{
+    		float: right;
+    		width: 20%;
+    		height: 80%;
+    		margin-right: 15px;
+    	}
+    	.mui-bar{
+    		padding: 0;
+    		margin: 0;
+    	}
+    	.addAddress{
+    		width: 100%;
+    		height: 50px;
+    		color: #FFFFFF;
+    		font-size: 18px;
+    		background-color: red;
+    	}
+    </style>
+    
+</head>
+<body>
+    
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <span class="mui-pull-left" style="line-height: 45px;">管理收货地址</span>
+    </header>
+    
+    <nav class="mui-bar mui-bar-tab">
+        <button type="button" class="addAddress" id="addAddress">新增收货地址</button>
+    </nav>
+    
+    <div class="mui-content">
+        <ul class="mui-table-view" id="addressList">
+                
+                <!--<li class="mui-table-view-cell">
+                    <p class="addrItemUserName">张红玉</p>
+                    <p class="addrItemUserTel">13087344578</p>
+                    <p class="addrItemUserAddr">湖南省衡阳市珠晖区横花路105号</p>
+                    <p class="addrItemOperation">
+                    	<input type="radio" name="defaultAddr" class="addrInpt" />
+                    	设为默认地址
+                    	<button type="button" class="addrDel">删除</button>
+                    	<button type="button" class="addrEdit">编辑</button>
+                    	
+                    </p>
+                </li>
+                <li class="mui-table-view-cell">
+                    <p class="addrItemUserName">张红玉</p>
+                    <p class="addrItemUserTel">13087344578</p>
+                    <p class="addrItemUserAddr">湖南省衡阳市珠晖区横花路105号</p>
+                    <p class="addrItemOperation">
+                    	<input type="radio" name="defaultAddr" class="addrInpt" />
+                    	设为默认地址
+                    	<button type="button" class="addrDel">删除</button>
+                    	<button type="button" class="addrEdit">编辑</button>
+                    	
+                    </p>
+                </li>-->
+                <!--<li class="mui-table-view-cell">
+                    <p class="addrItemUserName">张红玉</p>
+                    <p class="addrItemUserTel">13087344578</p>
+                    <p class="addrItemUserAddr">湖南省衡阳市珠晖区横花路105号</p>
+                    <p class="addrItemOperation">
+                    	<input type="radio" name="defaultAddr" class="addrInpt" />
+                    	设为默认地址
+                    	<button type="button" class="addrDel">删除</button>
+                    	<button type="button" class="addrEdit">编辑</button>
+                    	
+                    </p>
+                </li>-->
+            </ul>
+    </div>
+    
+    <script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+    mui.init();
+    	function showAddress(addressData){
+    		var addressList=mui('#addressList')[0];
+    		var li=document.createElement("li");
+    		if(addressData.length>0){
+    			mui.each(addressData,function(index,item){
+    				li.className='mui-table-view-cell';
+    				li.innerHTML+='<p class="addrItemUserName">'+item.addName+
+    				'</p><p class="addrItemUserTel">'+item.addTel+
+    				'</p><p class="addrItemUserAddr">'+item.addAddress+item.addStreet+
+    				'</p><p class="addrItemOperation"><input type="radio" name="defaultAddr" class="addrInpt" />设为默认地址<button type="button" class="addrDel">删除</button><button type="button" class="addrEdit">编辑</button></p>';
+    			
+    			});
+    		}else{
+    			li.className='mui-table-view-cell';
+    			li.innerHTML='<p id="ifNoAddAddress">您暂时没有添加地址哦！去添加？<p>';
+    			document.getElementById('ifNoAddAddress').addEventListener('tap',function () {
+				   mui.openWindow({
+						url:'./editAddress.html',
+						id:'editAddress.html',
+						styles:{
+							top:'0px',
+							bottom:'0px',
+							width:'100%',
+							height:'100%'
+						},
+						waiting: {
+					        autoShow: true, //自动显示等待框，默认为true
+					        title: '正在加载...请稍后', //对话框上显示的提示内容
+					        options: {
+					            width: '100%', //，默认根据内容自动计算合适宽度
+					            height: '100%', //默认根据内容自动计算合适高度
+					        }
+					    }
+					});    
+				});	
+    		}
+    		addressList.appendChild(li);
+    		
+    	}
+    	mui.plusReady(function(){
+    		var self=plus.webview.currentWebview(); 
+    		var userAddress=self.userAddress;
+    		
+    		
+    		//console.log('地址编辑：'+JSON.stringify(userAddress));
+    		showAddress(userAddress);
+    		//mui('#addAddress')[0].addEventListener('tap',function () {
+    			
+			document.getElementById('addAddress').addEventListener('tap',function () {
+			   console.log('添加地址000');
+			   mui.openWindow({
+					url:'./editAddress.html',
+					id:'editAddress.html',
+					styles:{
+						top:'0px',
+						bottom:'0px',
+						width:'100%',
+						height:'100%'
+					},
+					waiting: {
+				        autoShow: true, //自动显示等待框，默认为true
+				        title: '正在加载...请稍后', //对话框上显示的提示内容
+				        options: {
+				            width: '100%', //，默认根据内容自动计算合适宽度
+				            height: '100%', //默认根据内容自动计算合适高度
+				        }
+				    }
+				});    
+			});	
+    		
+    		
+    		
+    		
+    		//编辑地址
+    		mui('.addrItemOperation').on('tap','.addrEdit',function(){
+    			//取到当前地址的信息，后传给editAddress页面
+    			//console.log('编辑地址')
+    			mui.openWindow({
+					url:'./editAddress.html',
+					id:'editAddress.html',
+					styles:{
+						top:'0px',
+						bottom:'0px',
+						width:'100%',
+						height:'100%'
+					},
+					waiting: {
+				        autoShow: true, //自动显示等待框，默认为true
+				        title: '正在加载...请稍后', //对话框上显示的提示内容
+				        options: {
+				            width: '100%', //，默认根据内容自动计算合适宽度
+				            height: '100%', //默认根据内容自动计算合适高度
+				        }
+				    }
+				}); 
+			});
+    		
+    		
+    		
+    		//删除当前地址
+    		mui('.addrItemOperation').on('tap','.addrDel',function(){
+    			var thisNode=this.parentNode.parentNode;
+    			var btnArr=['确定','取消']
+    			mui.confirm('您确定要删除该地址吗','修改地址',btnArr,function(event){
+    				if(event.index==0){
+						thisNode.remove();
+					}
+    			});
+    		});
+    	});
+    </script>
+</body>
+</html>

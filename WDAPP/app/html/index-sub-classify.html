@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>商品分类</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+    <link href="css/iconfont.css" rel="stylesheet"/>
+    <style type="text/css">
+    	.mui-table-view .mui-table-view-cell{
+			color: #929292;
+		}
+		.shopTitle{
+			margin: 0 auto;
+			text-indent: 1em;
+			font-size: 18px;
+			color: #282828;
+			line-height: 40px;
+		}
+		#seachGoods{
+			margin-top: -30px;
+			font-size: 18px;
+			color: #929292;
+		}
+    </style>
+</head>
+<body>
+	
+	<header class="mui-bar mui-bar-nav" id='headerNavStr'>
+        <h1 class="mui-title" >商品分类</h1>
+    </header>
+	
+    <!--<header class="mui-bar mui-bar-nav">
+    	div class="mui-input-row mui-search" style="width: 88%;">
+            <input type="search" class="mui-input-clear" placeholder="输入关键字搜索">
+        </div>
+       <a class="mui-pull-right" id="seachGoods">搜索</a>
+       
+    </header>-->
+    
+    
+    <div class="mui-content">
+    	<div>
+    		<p class="shopTitle">商品类型</p>
+    		<ul class="mui-table-view" id="goodsTypeList">
+    			<li class="mui-table-view-cell">
+	    	        <a class="mui-navigate-right" href="#" id='getAllGoodsInfo'>全部商品</a>
+	    	    </li>
+    		</ul>
+    	</div>
+
+		<div>
+			<p class="shopTitle">商品活动</p>
+    		<ul class="mui-table-view" id="goodsActionList">
+    			
+    	    	<!--<li class="mui-table-view-cell">
+	    	        <a class="mui-navigate-right" href="#">欢乐过五一</a>
+	    	    </li>
+	    	    <li class="mui-table-view-cell">
+	    	        <a class="mui-navigate-right" href="#">端午节，尽情放粽</a>
+	    	    </li>
+	    	    <li class="mui-table-view-cell">
+	    	        <a class="mui-navigate-right" href="#">庆国庆</a>
+	    	    </li>-->
+	    	</ul>
+    	</div>
+    
+    </div>    
+    <script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/zhylib.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/classify.js" type="text/javascript" charset="utf-8"></script>
+    
+</body>
+</html>

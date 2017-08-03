@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>订单详情</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/order.css"/>
+</head>
+<body>
+    
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">订单详情</h1>
+    </header>
+    <div class="mui-content">
+       
+        <div class="orderMsg" id="orderMsg">
+            <p class="orderP">订单状态：<span id="order-msg-status">已完成</span></p>
+            <hr class="hr" color="#f7f7f7"/>
+            <p class="orderP">订单号：<span id="orderMsgNum"></span></p>
+        </div>
+
+        <div class="orderUser" id="orderUser">
+            <p class="orderP">收件人：<span id="order-host-recieve"></span></p>
+            <hr class="hr" color="#f7f7f7"/>
+            <p class="orderP">电话：<span id="order-host-tel"></span></p>
+            <hr class="hr" color="#f7f7f7"/>
+            <p class="orderP">地址：<span id="order-host-addr"></span></p>
+        </div>
+
+        <div id="orderImg">
+        	<!--<div class="orderImg">
+                <p class="orderImgBox">
+                    <img src="../administrator/goodsImg/OSimg/os0102.jpg" />
+                    <span class="orderImgTopic">婚纱礼婚纱礼服时尚新款婚纱礼服时尚新款</span>
+                	<span class="orderImgNum">x1</span>
+                </p>
+                <p class="orderP">
+                	商品总价:<span id="orderImgPrice">688</span>
+                </p>
+                <hr class="hr"/>
+                <p class="orderP">
+                	下单时间:<span id="orderImgDate">20170312</span>
+                </p>
+            </div>-->
+        </div>
+        
+    </div>
+    <br  /><br  /><br  /><br  /><br  /><br  /><br  />
+    <div class="mui-bar mui-bar-tab">
+        <p class="orderTotalPrice">合计:<span id="orderTotalPrice">&yen;</span></p>
+    </div>
+
+    
+    
+    <script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="../js/zhylib.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/myOrder.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

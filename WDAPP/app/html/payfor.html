@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+</head>
+	<style>
+		.payfor{
+			width: 100%;
+			height: 235px;
+			font-size: 26px;
+			background: #FFFFFF;	
+		}
+		.payforHeader{
+			width: 100%;
+			height: 45px;
+			text-align: center;
+			line-height: 45px;
+			color: #929292;
+			border: 1px solid #E8E8E8;
+		}
+		.payforContent p{
+			width: 100%;
+			height: 45px;
+			text-align: center;
+			line-height: 45px;
+			color: #555555;
+			font-size: 22px;
+			
+		}
+		
+		.payforFooter{
+			width: 95%;
+			height: 50px;
+			margin-left: 2.5%;
+			margin-top: 96px;
+			
+		}
+		.payforBtn{
+			width: 100%;
+			height: 100%;
+			font-size: 20px;
+			color: #fff;
+			background: rgba(255,0,0,0.7);
+			border-radius: 5px;
+		}
+	</style>
+<body>
+    
+    <div id="content" class="mui-content payfor">
+        <div class="payforHeader">
+        	<span>付款详情</span>
+        </div>
+        <div class="payforContent">
+        	<p>需付款：<span class="payforAll" id="payforAll"></span>元</p>
+        </div>
+        <div class="payforFooter">
+        	<button type="button" class="mui-btn payforBtn" id="payforBtn">确认付款</button>
+        </div>
+    </div>
+    
+    <script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    	//来源页面
+    	var pageSourceId;
+    	mui.init();
+    	
+    	mui.plusReady(function(){
+    		//显示内容到支付页面
+    		var payfor=plus.webview.currentWebview();
+    		var payforInfo=plus.webview.currentWebview().payforInfo;
+    		
+    		pageSourceId=payforInfo.pageSourceId;
+    		var payforParent=plus.webview.getWebviewById(pageSourceId);
+    		
+    		var totalPrice=payforInfo.totalPrice;
+    		var userId=payforInfo.userId
+    		
+    		document.getElementById("payforAll").innerHTML=totalPrice;
+    		
+    		console.log('付款详情'+JSON.stringify(payfor));
+    		
+    		/*mui(document.body).on('tap','#content',function(){
+    			//关闭遮罩层
+				payforParent.setStyle({
+					mask:'none'
+				});
+				//关闭支付页面 并清空
+				//避免出现特殊情况，确保支付页面子在初始化时关闭
+				if(!payfor){
+					payfor=plus.webview.getWebviewById('share.html');
+				}
+				console.log('pafor支付页面关闭之前1'+JSON.stringify(payfor));
+				//关闭支付页面
+				if(payfor){
+					payfor.close();
+					payfor=null;
+				}
+				console.log('pafor2'+JSON.stringify(payfor));
+				
+    		});*/
+    		
+    		document.getElementById('payforBtn').addEventListener('tap',function () {
+    			mui.ajax('http://192.168.43.145:6868/payfor',{
+	    		    data:{
+	    		   		userId:userId,
+	    		   		goodPrice:totalPrice
+	    		   	},
+	    		   	dataType:'json',//服务器返回json格式数据
+	    		   	type:'post',//HTTP请求类型
+	    		   	timeout:10000,//超时时间设置为10秒；
+	    		   	success:function(data){
+	    		   		if(data.status=='1'){
+	    		   			mui.toast('购买成功');
+				    		mui.openWindow({
+								url:'myOrder.html',
+								id:'myOrder.html',
+								styles:{
+									top:'0px',
+									bottom:'0px',
+									width:'100%',
+									height:'100%'
+								},
+								extras:{
+									'goodsData':payforInfo
+								},
+								waiting: {
+							        autoShow: true, //自动显示等待框，默认为true
+							        title: '正在加载...请稍后', //对话框上显示的提示内容
+							        options: {
+							            width: '100%', //，默认根据内容自动计算合适宽度
+							            height: '100%', //默认根据内容自动计算合适高度
+							        }
+							    }
+							});
+				    		
+	    		   		}else if(data.status=='2'){
+	    		   			mui.toast('您的余额不足，请充值');
+	    		   		}
+	    		   	},
+	    		   	error:function(xhr,type,errorThrown){
+	    		   		mui.toast('服务器连接失败，情稍后再试');
+	    		   	}
+    		    });
+    		   
+    		});
+    		
+    	});
+    </script>
+</body>
+</html>

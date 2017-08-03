@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Wedding dress</title>
+	<link rel="shortcut icon" href="./adminImg/icon.png">
+	<link rel="stylesheet" type="text/css" href="iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="admin.css"/>
+</head>
+<body>
+<div class="attDiv"	id="attDiv">
+	<p id="attDivP">你还未登录</p>
+</div>
+<div class="coverDiv"	id="coverDiv">
+</div>
+<header>
+    <div class="wedLogo">
+        <img src="./adminImg/logo.png"/>
+    </div>
+    <div class="wedUser">
+        <ul id="logUl">
+            <li id="logReg">
+            	<a href="javascript:showReg()" class="LogReg">注册</a>
+            	<span style="color: #929292">/</span>
+            	<a href="javascript:showLogin()" class="LogReg">登录</a>
+            </li>
+        </ul>
+    </div>
+	<div class="donghua" id="donghua">
+		<ul>
+			<li><img class="yun" src="./adminImg/yun2.png"/></li>
+			<li><img class="feiji" src="./adminImg/feiji.gif"/></li>
+			<li><img class="chedui" src="./adminImg/chedui.png"/></li>
+		</ul>
+	</div>
+</header>
+
+<div id="regDiv" class="div" style="display: none">
+	<div class="hideDiv">
+		<a href="javascript:closeReg()">X</a>
+	</div>
+	<form method="post" class="RegLogform form-inline">
+		<ul>
+			<li><label>UserName:</label>
+				<input type="text" name="adRegName" id="adRegName" placeholder="请输入用户名"  />
+			</li>
+			<li>
+				<label>PassWord:</label>
+				<input type="password" name="adRegPwd" id="adRegPwd"placeholder="请输入密码" />
+			</li>
+		</ul><br />
+		<input type="button" value="注册" class="formBtn" id="adRegister" />
+		<a class="btnaa" onclick="showLogin()">已有账号？立即登录</a>
+	</form>
+</div>
+<div id="loginDiv" class="div" style="display: none">
+	<div class="hideDiv">
+		<a href="javascript:closeLogin()">X</a>
+	</div>
+	<form method="post" class="RegLogform">
+		<ul>
+			<li><label>UserName:</label>
+				<input type="text" id="adLoginName" placeholder="请输入用户名"  />
+			</li>
+			<li>
+				<label>PassWord:</label>
+				<input type="password" name="adLoginPwd" id="adLoginPwd" placeholder="请输入密码" >
+			</li>
+		</ul><br />
+		<input type="button" value="登录" class="formBtn" id="adminLogin">
+		<a class="btnaa" onclick="showReg()">没有账号？立即注册</a>
+	</form>
+</div>
+<br/>
+
+<div class="content" >
+	<fieldset><!--字体-->
+		<h3>添加商品类型</h3><br />
+		<p id="typeP">商品类型名称：</p>
+		<input type="text" name="goodsTypeName" id="goodsTypeName" class="filedIpt" /><br /><br />
+		<button class="filedBtn" onclick="addGoodsType()">添加商品类型</button>
+		<button class="filedBtn" onclick="showGoodsType()" id="showGoodsType">显示商品类型</button>
+		<table class="goodsTypeTab" id="goodsTypeTab" style="display: none">
+			<thead>
+				<tr>
+					<th>商品类型</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody id="goodsTypeTbody">
+				<tr>
+					<td colspan="2">暂无商品类型</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>  <!--添加商品类型-->
+
+	<fieldset><!--添加商品活动-->
+		<h3>添加商品活动</h3><br />
+		<ul>
+			<li>
+				<p>活动名称：</p><input type="text" id="actionName" class="filedIpt">
+			</li>
+			<li>
+				<p>活动优先级：</p><input type="text" id="actionPre" class="filedIpt">
+			</li>
+			<li>
+				<p>活动折扣：</p><input type="text" id="actionAgion" class="filedIpt">
+			</li>
+			<li>
+				<p>开始时间：</p><form name="form1" method="post" class="form" id="dateFormStart">
+										<select name="year"></select>年
+										<select name="month"></select>月
+										<select name="day"></select>日
+								</form>
+			</li>
+			<li>
+				<p>结束时间：</p><form name="form1" method="post" class="form" id="dateFormEnd">
+									<select name="year"></select>年
+									<select name="month"></select>月
+									<select name="day"></select>日
+								</form>
+			</li>
+		</ul>
+		<button class="filedBtn" onclick="addAction()">添加商品活动</button>
+		<button class="filedBtn" onclick="showAction()" id="showAction">显示商品活动</button>
+	</fieldset><!--添加活动及其详情--><br />
+	<div id="showActionType" style="display:none">
+		<table>
+			<thead>
+				<tr>
+					<th>开始时间</th>
+					<th>结束时间</th>
+					<th>活动名称</th>
+					<th>活动折扣</th>
+					<th>活动优先级</th>
+				</tr>
+			</thead>
+			<tbody id="actionTbody">
+				<tr>
+					<td colspan="5">暂无活动</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br /><br />
+	<fieldset>
+		<h3>添加参与活动的商品</h3><br />
+		<ul>
+			<li>
+				<p>活动类型：</p><select name="typeId" id="actionType" class="actionType"></select>
+			</li>
+		</ul>
+		<button class="filedBtn" onclick="addActionInfo()">添加参与活动的商品</button>
+	</fieldset>			<!--商品添加活动-->
+	<fieldset>
+		<h3>商品信息管理</h3><br/>
+		<div id="showpic">
+
+		</div>
+		<ul>
+			<li>
+				<p>商品类型：</p>
+				<select name="typeId" id="typeName" class="actionType" ></select>
+			</li>
+			<li>
+				<p>商品名称：</p>
+				<input type="text" name="pname" id="goodsName" class="filedIpt" />
+			</li>
+			<li>
+				<p>商品原价：</p>
+				<input type="text" name="normalPrice" id="normalPrice"  class="filedIpt"/>
+			</li>
+
+			<li>
+				<p style="float: left">商品图片： </p>
+				<label for="goodsPic" class="filedBtn picLabel" id="goo">选择商品图片</label>
+				<input type="file" multiple name="goodsPic" id="goodsPic" onchange="setImagePreviews(this,'showpic')"  style="display: none" />
+			</li>
+		</ul>
+
+		<button id="addGoodsBtn" class="filedBtn" onclick="addGoods()" >添加商品</button>
+		<button id="showGoodsBtn" class="filedBtn" onclick="showGoodsInfo()" >显示所有商品</button>
+
+	</fieldset>
+
+	<hr  /><br />
+	<div id="showAllGoodsInfo" style="display: none" >
+		<table id="showAllGoodsTab" >
+			<thead>
+			<tr>
+				<th>是否勾选</th>
+				<th>商品编号</th>
+				<th>商品名称</th>
+				<th>商品详情</th>
+				<th>商品原价</th>
+				<th>商品折后价</th>
+				<th>商品种类</th>
+				<th>商品图片</th>
+				<th>商品状态</th>
+				<th>商品操作</th>
+			</tr>
+			</thead>
+			<tbody id="showGoodsTbody">
+				<tr>
+					<td style="font: bolder;" colspan="10">暂无商品信息</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+
+
+<div class="footer">
+		<div class="store_icon">
+			<img src="adminImg/icon.png"/>
+			<span class="wangpu">旺铺</span><span class="line">|</span><span class="zhiNeng">智能版</span>
+			<span class="sheji">店铺设计：<span>张红玉  鲁周娟</span></span>
+		</div>
+		<div class="jituan">
+			<ul class="ul">
+				<li><a href="#">阿里巴巴集团</a><b>|</b></li>
+				<li><a href="#">阿里巴巴国际站</a><b>|</b></li>
+				<li><a href="#">阿里巴巴中国站</a><b>|</b></li>
+				<li><a href="#">阿里妈妈</a><b>|</b></li>
+				<li><a href="#">阿里云计算</a></li>
+			</ul><br>
+			<ul class="ul">
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">诚征英才</a></li>
+				<li><a href="#">联系客服</a></li>
+				<li><a href="#">合作伙伴</a></li>
+			</ul>
+			<span class="copyright">&copy;2016&nbsp;&nbsp;wd.com版权所有</span>
+		</div>
+	</div>
+	<script src="js/jquery2.js"></script>
+	<script type="text/javascript" src="js/YMD.js"></script>
+	<script type="text/javascript" src="js/admin.js"></script>
+	<script type="text/javascript" src="js/showPic.js"></script>
+	<script type="text/javascript" src="js/ajaxfileupload.js"></script>
+</body>
+</html>
